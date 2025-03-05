@@ -1,0 +1,25 @@
+.calendar-view .day-page .calendar-control, /* Para DayPage */
+.calendar-view .week-page .calendar-control, /* Para WeekPage */
+.calendar-view .month-page .calendar-control, /* Para MonthPage */
+.calendar-view .year-page .calendar-control { /* Para YearPage */
+    -fx-disable: true; /* Deshabilita la interacción con el control del calendario */
+}
+
+.entry-disponible {
+    -fx-background-color: #a72828; /* Verde */
+    -fx-text-fill: white;
+}
+
+.entry-no-disponible {
+    -fx-background-color: #dc3545; /* Rojo */
+    -fx-text-fill: white;
+}
+.entry {
+    -fx-background-color: transparent; /* Para que los eventos sean transparentes y parezcan inamovibles */
+    -fx-text-fill: black; /* Ajusta según tus necesidades */
+}
+
+.entry:hover {
+    -fx-background-color: transparent; /* Evita cambios al pasar el ratón */
+    -fx-cursor: default;  /* Cambia el cursor a la flecha normal */
+}

@@ -1,0 +1,67 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.biancamar.GestionUsuariosController"
+           stylesheets="@styles-gestion-usuario.css"
+           style="-fx-background-color: #F4F4F9;">
+
+
+    <VBox alignment="TOP_CENTER" spacing="30" maxWidth="900" style="-fx-padding: 20;">
+
+
+
+        <!-- Título Principal -->
+        <Label text="Gestión de Usuario"
+               style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
+
+        <HBox alignment="CENTER" spacing="40" minWidth="400" >
+            <VBox alignment="BOTTOM_LEFT">
+                <!-- Contenedor de Paneles -->
+                <HBox alignment="BOTTOM_RIGHT">
+                    <Button text="Volver" onAction="#volver" />
+                </HBox>
+            </VBox>
+            <!-- Panel de Datos Personales -->
+            <VBox spacing="10" alignment="TOP_CENTER" maxWidth="400"
+                  style="-fx-background-color: white; -fx-padding: 20; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+                <Label text="Datos Personales" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                <TextField fx:id="txtNombre" promptText="Nombre"/>
+                <TextField fx:id="txtApellido" promptText="Apellido"/>
+                <TextField fx:id="txtDNI" promptText="DNI" editable="false"/>
+                <TextField fx:id="txtTelefono" promptText="Teléfono"/>
+                <TextField fx:id="txtCorreo" promptText="Correo"/>
+                <TextField fx:id="txtDireccion" promptText="Dirección"/>
+                <TextField fx:id="txtLocalidad" promptText="Localidad"/>
+                <TextField fx:id="txtProvincia" promptText="Provincia"/>
+                <TextField fx:id="txtCodigoPostal" promptText="Código Postal"/>
+
+                <!-- Botón Guardar Información -->
+                <Button text="Guardar Información" fx:id="btnGuardarInfo" style="-fx-font-size: 14px;"/>
+            </VBox>
+
+
+
+            <!-- Panel de Seguros -->
+            <VBox spacing="10" alignment="CENTER" maxWidth="400"
+                  style="-fx-background-color: white; -fx-padding: 20; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+                <Label text="Seleccione los Seguros" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+                <!-- Contenedor de Seguros -->
+                <ScrollPane fitToWidth="true" style="-fx-background: transparent; -fx-padding: 10;">
+                    <VBox fx:id="vboxSeguros" spacing="15" alignment="CENTER" maxWidth="380"/>
+                </ScrollPane>
+
+                <!-- Botón Guardar Seguros -->
+                <Button text="Guardar Seguros" fx:id="btnGuardarSeguros" style="-fx-font-size: 14px;"/>
+            </VBox>
+            <!-- Contenedor de Paneles -->
+<!--            <HBox alignment="BASELINE_LEFT">-->
+<!--                <Button text="Volver" onAction="#volver" />-->
+<!--            </HBox>-->
+        </HBox>
+
+    </VBox>
+
+</StackPane>

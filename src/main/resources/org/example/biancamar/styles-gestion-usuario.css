@@ -1,0 +1,122 @@
+/* Fondo general de la página */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #FFFFFF, #F0F4F8); /* Fondo sutil con degradado */
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Contenedor principal */
+.stack-pane {
+    -fx-alignment: center;
+}
+
+/* Encabezado / Título principal */
+.label {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2A4D69; /* Azul oscuro, profesional */
+}
+
+/* Subtítulos o descripciones */
+.label.descripcion {
+    -fx-font-size: 13px;
+    -fx-text-fill: #5A5A5A;
+    -fx-wrap-text: true;
+}
+
+/* Contenedores de paneles (Datos personales / Seguros) */
+.vbox {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 20;
+    -fx-spacing: 15;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: #C0C0C0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 8, 0, 0, 2);
+    -fx-max-width: 400px;
+}
+
+/* Separador entre paneles */
+.separator {
+    -fx-background-color: #C0C0C0;
+    -fx-padding: 10;
+}
+
+/* Campos de texto */
+.text-field {
+    -fx-border-color: #C0C0C0;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 6 10;
+    -fx-font-size: 14px;
+    -fx-background-color: #FAFAFA;
+}
+
+.text-field:focused {
+    -fx-border-color: #2A4D69; /* Azul oscuro al enfocar */
+    -fx-background-color: #FFFFFF;
+}
+
+/* Botones */
+.button {
+    -fx-background-color: #2A4D69; /* Azul oscuro, que transmite confianza */
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 2);
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+}
+
+.button:hover {
+    -fx-background-color: #1F3A57; /* Un tono ligeramente más oscuro */
+}
+
+.button:pressed {
+    -fx-background-color: #172B3A;
+}
+
+/* Contenedor para cada seguro */
+.seguro-item {
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 12;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-border-color: #C0C0C0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 4, 0, 0, 1);
+    -fx-max-width: 400px;
+}
+
+/* Estilo de CheckBox (para seguros) */
+.check-box {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Descripciones dentro de seguros */
+.seguro-item .label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+    -fx-wrap-text: true;
+    -fx-max-width: 380px;
+}
+
+/* ScrollPane para seguros */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Hover en elementos de seguro */
+.seguro-item:hover {
+    -fx-background-color: #EEF3F7;
+}

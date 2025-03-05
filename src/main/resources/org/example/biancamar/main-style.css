@@ -1,0 +1,151 @@
+/* Estilos generales */
+.root {
+    -fx-background-color: #f4f6f9;
+    -fx-font-family: "Arial";
+}
+
+/* Menú lateral */
+.sidebar {
+    -fx-background-color: #1D3557;
+    -fx-padding: 0 20 20 20; /* Sin padding en la parte superior */
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+
+.menu-title {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.menu-button {
+    -fx-pref-width: 250px;
+    -fx-pref-height: 50px;
+    -fx-background-color: #457B9D;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-border-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0.3, 2, 2);
+    -fx-alignment: center;
+
+}
+
+.menu-button:hover {
+    -fx-background-color: #1D3557;
+    -fx-cursor: hand;
+}
+
+/* Contenido central */
+.stack-pane {
+    -fx-padding: 30;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-border-color: #e3e6eb;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0.3, 2, 2);
+}
+
+.welcome-text {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+
+
+.citas-list {
+    -fx-border-radius: 8;
+    -fx-background-color: #f4f6f9;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+
+.cita-item:hover {
+    -fx-background-color: #e3f2fd;
+    -fx-cursor: hand;
+}
+/* Contenedor principal de citas */
+.citas-container {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-border-width: 1;
+    -fx-border-color: #e3e6eb;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0.3, 2, 2);
+    -fx-pref-width: 300; /* Mitad del ancho anterior */
+}
+
+/* Título dentro del recuadro */
+.citas-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+    -fx-alignment: center;
+    -fx-padding: 10 0 10 0;
+    -fx-border-color: transparent transparent #e3e6eb transparent;
+    -fx-border-width: 0 0 1 0; /* Línea inferior */
+}
+
+/* Tarjeta individual de cita */
+.cita-item {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 15;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-border-color: #ddd;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 5, 0.5, 0, 2);
+    -fx-spacing: 10;
+}
+
+/* Texto dentro de cada tarjeta */
+.cita-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+
+/* Botón para ver el detalle de la cita */
+.cita-button {
+    -fx-background-color: #457B9D;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 8 16;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 4, 0.3, 0, 2);
+    -fx-alignment: center;
+}
+
+.cita-button:hover {
+    -fx-background-color: #1D3557;
+}
+
+/* Opcional: Estilos para el ScrollPane */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+
+.foto-container {
+    -fx-padding: 15; /* o el valor que desees */
+}
+
+.foto-perfil {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 4, 0.5, 0, 0);
+    -fx-border-radius: 50;
+    -fx-padding: 10;
+    -fx-alignment: center;
+}
+
+
+

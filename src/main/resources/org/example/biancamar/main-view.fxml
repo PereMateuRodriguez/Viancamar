@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane stylesheets="@main-style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.biancamar.MainController">
+    <left>
+        <BorderPane fx:id="sidebar" styleClass="sidebar" >
+
+            <top>
+                <HBox alignment="CENTER" styleClass="foto-container">
+
+                    <!-- Coloca el logo directamente como primer hijo -->
+                    <ImageView  fx:id="fotoPerfil" fitWidth="150" fitHeight="150" preserveRatio="true" styleClass="foto-perfil" >
+                        <image>
+                            <Image url="@biancamarblanca.png"  />
+                        </image>
+                    </ImageView>
+                </HBox>
+            </top>
+            <center>
+                <!-- Contenedor para los botones centrados -->
+                <VBox spacing="15" alignment="CENTER">
+
+                    <Label styleClass="menu-title" text="Menú Principal" />
+                    <Button fx:id="btnGestionCita" onAction="#handleGestionCita" styleClass="menu-button" text="Gestionar Cita" />
+                    <Button fx:id="btnGestionUsuario" onAction="#handleGestionUsuario" styleClass="menu-button" text="Gestionar Usuario" />
+                    <Button onAction="#handleConsultaHistorial" styleClass="menu-button" text="Historial Médico" />
+                    <Button onAction="#handleConsultaResultados" styleClass="menu-button" text="Resultados" />
+                </VBox>
+
+
+            </center>
+        </BorderPane>
+    </left>
+    <!-- Menú lateral -->
+
+    <!-- Contenedor central dinámico -->
+    <center>
+        <StackPane fx:id="dynamicContent" prefHeight="554.0" prefWidth="147.0" styleClass="stack-pane">
+            <Label styleClass="welcome-text" text="Bienvenido a la App Médica" />
+        </StackPane>
+    </center>
+
+    <!-- Lista de citas -->
+    <right>
+        <VBox fx:id="citasWrapper" styleClass="citas-container" spacing="10" alignment="CENTER">
+            <Label text="Tus Citas" styleClass="citas-title"/>
+            <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-background: transparent;">
+                <VBox fx:id="citasContainer" spacing="10" alignment="CENTER">
+                    <!-- Las tarjetas se agregarán dinámicamente -->
+                </VBox>
+            </ScrollPane>
+        </VBox>
+
+
+
+    </right>
+</BorderPane>

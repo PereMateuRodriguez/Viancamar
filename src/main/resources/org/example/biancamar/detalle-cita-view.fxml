@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.biancamar.DetalleCitaController"
+            stylesheets="@calendar-styles.css">
+
+    <left>
+        <VBox spacing="20">
+            <Label text="Calendario de citas disponibles" style="-fx-font-size: 24; -fx-text-fill: #666;" />
+            <ScrollPane fx:id="calendarContainer" style="-fx-background-color: #f8f8f8;" />
+        </VBox>
+    </left>
+
+    <center>
+        <VBox style="-fx-background-color: #f0f0f0; -fx-padding: 20; -fx-border-color: #ccc; -fx-border-width: 1px;"
+              prefWidth="300">
+            <StackPane style="-fx-background-color: white; -fx-border-color: #ddd; -fx-border-width: 1px; -fx-border-radius: 5px; -fx-padding: 20;">
+                <Label text="Crear cita" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: #444;" />
+            </StackPane>
+
+            <Label fx:id="fechaLabel"  style="-fx-font-size: 18; -fx-text-fill: #444; -fx-font-weight: bold;" />
+            <Label fx:id="doctorLabel" text="Doctor: " style="-fx-font-size: 16; -fx-padding: 5;" />
+            <Label fx:id="hospitalLabel" text="Hospital: " style="-fx-font-size: 16; -fx-padding: 5;" />
+            <Label fx:id="especialidadLabel" text="Especialidad: " style="-fx-font-size: 16; -fx-padding: 5;" />
+
+            <Label text="Seleccione un horario:" style="-fx-font-size: 16; -fx-text-fill: #555; -fx-padding: 10;" />
+            <ComboBox fx:id="horariosComboBox" style="-fx-font-size: 14;" />
+            <Button text="Crear Cita" fx:id="crearCitaButton" style="-fx-font-size: 16; -fx-padding: 10;" />
+            <Button text="Eliminar Cita" fx:id="eliminarCitaButton" onAction="#eliminarCita"
+                    style="-fx-font-size: 16; -fx-padding: 10;" />
+            <!-- Botón de Volver -->
+            <Button text="Volver" onAction="#volver" style="-fx-font-size: 16; -fx-padding: 10; -fx-margin-top: 20;" />
+        </VBox>
+    </center>
+
+</BorderPane>

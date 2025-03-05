@@ -1,0 +1,30 @@
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.DatePicker?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="CENTER"
+      fx:controller="org.example.biancamar.CrearCitaController">
+
+    <!-- Campo de búsqueda para el doctor -->
+    <Label text="Buscar Doctor" />
+    <TextField fx:id="txtBuscarDoctor" promptText="Escribe el nombre del doctor" onKeyReleased="#buscarDoctor" />
+
+    <Label text="Resultados de la búsqueda:" />
+    <ListView fx:id="listResultadosDoctores" prefHeight="200" onMouseClicked="#seleccionarDoctor"/>
+
+    <!-- Mostrar la selección del doctor -->
+    <Label fx:id="lblDoctorSeleccionado" text="Doctor seleccionado: Ninguno" />
+
+    <!-- DatePicker para seleccionar fecha -->
+    <Label text="Seleccione el día para la consulta:" />
+    <DatePicker fx:id="datePickerFecha" disable="true" />
+
+    <!-- Campo para hora -->
+    <TextField fx:id="txtHora" promptText="Hora de la cita (HH:MM)" disable="true" />
+
+    <Button text="Guardar Cita" onAction="#guardarCita" disable="true" />
+</VBox>

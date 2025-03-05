@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.biancamar.ConsultaHistorialController"
+      spacing="20" alignment="TOP_CENTER" style="-fx-padding: 30; -fx-background-color: #f4f4f4;">
+
+    <!-- Cabecera -->
+    <HBox alignment="CENTER_LEFT" spacing="10">
+
+        <Label text="Historial Médico" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #444;" />
+    </HBox>
+
+    <!-- Contenido -->
+    <GridPane hgap="20" vgap="20" alignment="CENTER">
+        <!-- Primera Fila -->
+        <Label text="Fecha de Creación:" style="-fx-font-weight: bold; -fx-font-size: 16px;"
+               GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label fx:id="labelFechaCreacion" style="-fx-font-size: 16px; -fx-text-fill: #555;"
+               GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <!-- Segunda Fila -->
+        <Label text="Resumen:" style="-fx-font-weight: bold; -fx-font-size: 16px;"
+               GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextArea fx:id="textAreaResumen" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                  editable="false" wrapText="true" prefHeight="100"
+                  style="-fx-background-color: #fff; -fx-text-fill: #333;" />
+
+        <!-- Tercera Fila -->
+        <Label text="Condiciones Preexistentes:" style="-fx-font-weight: bold; -fx-font-size: 16px;"
+               GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextArea fx:id="textAreaCondiciones" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                  editable="false" wrapText="true" prefHeight="100"
+                  style="-fx-background-color: #fff; -fx-text-fill: #333;" />
+
+        <!-- Cuarta Fila -->
+        <Label text="Notas Adicionales:" style="-fx-font-weight: bold; -fx-font-size: 16px;"
+               GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <TextArea fx:id="textAreaNotas" GridPane.columnIndex="1" GridPane.rowIndex="3"
+                  editable="false" wrapText="true" prefHeight="100"
+                  style="-fx-background-color: #fff; -fx-text-fill: #333;" />
+
+        <!-- Quinta Fila -->
+        <Label text="Medicamentos:" style="-fx-font-weight: bold; -fx-font-size: 16px;"
+               GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextArea fx:id="textAreaMedicamentos" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                  editable="false" wrapText="true" prefHeight="100"
+                  style="-fx-background-color: #fff; -fx-text-fill: #333;" />
+    </GridPane>
+    <!-- Botón Descargar -->
+    <Button text="Descargar PDF" onAction="#descargarPDF"
+            style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200px; -fx-pref-height: 40px;" />
+    <!-- Botón Volver -->
+    <Button text="Volver al Menú Principal" onAction="#volverAlMenuPrincipal"
+            style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-pref-width: 200px; -fx-pref-height: 40px;" />
+</VBox>

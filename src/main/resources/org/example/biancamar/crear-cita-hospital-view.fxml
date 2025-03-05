@@ -1,0 +1,11 @@
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox spacing="10" alignment="CENTER" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <Label text="Crear Cita - Hospital" />
+    <TextField fx:id="txtFecha" promptText="Fecha de la cita (YYYY-MM-DD)" />
+    <TextField fx:id="txtHora" promptText="Hora de la cita (HH:MM)" />
+    <TextField fx:id="txtHospital" promptText="Hospital" />
+    <Button text="Guardar" onAction="#guardarCita" />
+</VBox>

@@ -1,0 +1,68 @@
+/* Fondo general */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #e3f2fd, #fff);
+    -fx-font-family: "Arial";
+}
+
+/* Contenedor principal */
+#rootContainer, .VBox {
+    -fx-alignment: center;
+    -fx-spacing: 20;
+}
+
+/* Logo con sombra */
+.logo-image {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0.5, 0, 0);
+}
+
+/* Etiqueta de bienvenida */
+.welcome-label {
+    -fx-font-size: 20px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+/* Campos de entrada */
+.login-field {
+    -fx-pref-width: 250px;
+    -fx-font-size: 14px;
+    -fx-padding: 8;
+    -fx-background-radius: 5;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 4, 0.3, 2, 2);
+    -fx-text-fill: #333;
+}
+
+/* Etiqueta de error */
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-weight: bold;
+}
+
+/* Botón de inicio de sesión */
+.login-button {
+    -fx-background-color: #1d3557;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.3, 2, 2);
+}
+.login-button:hover {
+    -fx-background-color: #457b9d;
+}
+
+/* Botón de registro */
+.register-button {
+    -fx-background-color: #457b9d;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.3, 2, 2);
+}
+.register-button:hover {
+    -fx-background-color: #1d3557;
+}

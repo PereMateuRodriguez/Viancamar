@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.biancamar.GestionCitasController">
+
+    <!-- Barra Superior con el buscador -->
+    <top>
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="textFieldBuscarDoctor"
+                           promptText="Buscar doctor por nombre o apellido..."
+                           prefWidth="300" />
+                <Button text="Buscar" onAction="#buscarDoctor" />
+            </HBox>
+
+            <!-- ComboBox para Especialidades -->
+            <ComboBox fx:id="comboBoxEspecialidad" promptText="Seleccionar Especialidad" prefWidth="300" />
+
+            <!-- ComboBox para Hospitales -->
+            <ComboBox fx:id="comboBoxHospitales" promptText="Seleccionar Hospital" prefWidth="300" />
+        </VBox>
+    </top>
+
+    <!-- Contenedor para resultados -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-padding: 10;">
+            <content>
+                <VBox fx:id="vBoxResultados" spacing="20" alignment="TOP_CENTER" />
+            </content>
+        </ScrollPane>
+    </center>
+
+    <!-- Barra Inferior -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10;">
+            <Button text="Volver" onAction="#volver" />
+            <Button fx:id="botonSiguiente" text="Siguiente" onAction="#irPantallaSiguiente" />        </HBox>
+    </bottom>
+
+
+</BorderPane>

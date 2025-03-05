@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ComboBox?>
+<StackPane xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="org.example.biancamar.ConsultaResultadosController">
+    <VBox spacing="10" alignment="TOP_CENTER">
+
+        <!-- Filtros de búsqueda -->
+        <VBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="textFieldBuscarDoctor" promptText="Buscar doctor por nombre o apellido..." prefWidth="300" />
+                <Button text="Buscar" onAction="#buscarCitas" />
+            </HBox>
+
+            <ComboBox fx:id="comboBoxEspecialidad" promptText="Seleccionar especialidad" prefWidth="300" />
+            <ComboBox fx:id="comboBoxHospital" promptText="Seleccionar hospital" prefWidth="300" />
+        </VBox>
+
+        <!-- Tabla para mostrar los resultados (citas pasadas) -->
+        <TableView fx:id="tablaCitas" prefWidth="600" prefHeight="400" style="-fx-text-fill: black;">
+            <columns>
+                <TableColumn fx:id="columnaFecha" text="Fecha"/>
+                <TableColumn fx:id="columnaHorario" text="Horario"/>
+                <TableColumn fx:id="columnaMedico" text="Médico"/>
+                <TableColumn fx:id="columnaEspecialidad" text="Especialidad"/>
+                <TableColumn fx:id="columnaResultado" text="Resultado"/>
+            </columns>
+        </TableView>
+
+        <!-- Botón volver -->
+        <Button text="Volver" onAction="#handleVolver" />
+    </VBox>
+</StackPane>

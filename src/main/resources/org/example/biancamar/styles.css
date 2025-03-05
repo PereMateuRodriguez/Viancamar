@@ -1,0 +1,136 @@
+/* Fondo general y tamaño mínimo de la ventana */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #e3f2fd, #fff);
+    -fx-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -fx-min-width: 900;
+    -fx-min-height: 700;
+    -fx-alignment: center; /* Centra el contenido de la raíz */
+}
+
+/* Contenedor principal del registro, centrado */
+#rootContainer {
+    -fx-alignment: center;    /* Alinea el contenido interno en el centro */
+    -fx-spacing: 25;
+    -fx-padding: 40;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dcdcdc;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 8, 0.3, 0, 4);
+}
+
+/* Título principal de la página */
+.label-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-padding: 0 0 20 0;
+    -fx-alignment: center;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    -fx-padding: 20;
+    -fx-hgap: 20;
+    -fx-vgap: 20;
+}
+
+/* Títulos de secciones dentro del formulario */
+.section-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+    -fx-padding-bottom: 10;
+    -fx-border-color: transparent transparent #dcdcdc transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Etiquetas de campo */
+.label-field {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+/* Campos de entrada (texto, contraseña, ComboBox y DatePicker) */
+.text-field,
+.password-field,
+.combo-box,
+.date-picker {
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #dcdcdc;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 3, 0.3, 0, 1);
+}
+
+/* Etiqueta de error */
+.error-label {
+    -fx-text-fill: #b00020;
+    -fx-font-size: 13px;
+    -fx-font-style: italic;
+}
+
+/* Botón principal (por ejemplo, registrar) */
+.button {
+    -fx-background-color: #005587;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 25;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.3, 2, 2);
+}
+.button:hover {
+    -fx-background-color: #003f63;
+}
+
+/* Botón secundario, si lo usas */
+.register-button {
+    -fx-background-color: #007ba7;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 25;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0.3, 2, 2);
+}
+.register-button:hover {
+    -fx-background-color: #005f7c;
+}
+/* Encabezado */
+.header-container {
+    -fx-alignment: center;
+    -fx-spacing: 10;
+    -fx-padding: 20 0 30 0;
+}
+
+.header-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.header-subtitle {
+    -fx-font-size: 18px;
+    -fx-text-fill: #555555;
+}
+
+/* Beneficios */
+.benefits-container {
+    -fx-padding: 20 0;
+}
+
+.benefit-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555555;
+}
+
+/* Pie de página */
+.footer {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777777;
+    -fx-padding: 20 0 0 0;
+}

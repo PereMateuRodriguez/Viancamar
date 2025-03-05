@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.biancamar.LoginController">
+    <!-- Vinculación de la hoja de estilos -->
+    <stylesheets>
+        <URL value="@login-style.css" />
+    </stylesheets>
+    <children>
+        <!-- VBox anclado para centrar el contenido -->
+        <VBox alignment="CENTER" spacing="15" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <padding>
+                <Insets top="20" bottom="20" left="20" right="20"/>
+            </padding>
+
+            <!-- ImageView para el logo; la imagen se cargará desde el controlador -->
+            <ImageView fx:id="logoImage" fitWidth="180" preserveRatio="true" styleClass="logo-image"/>
+
+            <!-- Etiqueta de bienvenida -->
+            <Label text="Bienvenido a Biancamar" styleClass="welcome-label"/>
+
+            <!-- Campo de DNI -->
+            <TextField fx:id="dniField" promptText="Introduce tu DNI" styleClass="login-field"/>
+
+            <!-- Campo de contraseña -->
+            <PasswordField fx:id="passwordField" promptText="Introduce tu contraseña" styleClass="login-field"/>
+
+            <!-- Etiqueta para errores -->
+            <Label fx:id="errorLabel" text="" styleClass="error-label"/>
+
+            <!-- Botones -->
+            <HBox alignment="CENTER" spacing="10">
+                <Button text="Iniciar Sesión" onAction="#onLogin" styleClass="login-button"/>
+                <Button text="Registrarse" onAction="#onRegister" styleClass="register-button"/>
+            </HBox>
+
+            <!-- Espaciador para empujar el contenido y mantenerlo centrado -->
+            <Region VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </children>
+</AnchorPane>

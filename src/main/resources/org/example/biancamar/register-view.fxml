@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.biancamar.RegisterController"
+            styleClass="main-container"
+            stylesheets="@styles.css">
+
+    <!-- Título en la parte superior -->
+    <top>
+        <Label text="Registro de Usuario"
+               styleClass="label-title"
+               BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Contenido principal en el centro -->
+    <center>
+        <GridPane hgap="20" vgap="20" alignment="CENTER" styleClass="form-container">
+
+            <!-- Sección de Datos Personales -->
+            <VBox spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="0" alignment="CENTER_LEFT" styleClass="section">
+                <Label text="Información Personal" styleClass="section-title"/>
+
+                <!-- Nombre y Apellido -->
+                <Label text="Nombre:"/>
+                <TextField fx:id="nameField" promptText="Introduce tu nombre" styleClass="text-field" />
+
+                <Label text="Apellido:"/>
+                <TextField fx:id="lastNameField" promptText="Introduce tu apellido" styleClass="text-field" />
+
+                <!-- Correo Electrónico, Contraseña -->
+                <Label text="Correo Electrónico:"/>
+                <TextField fx:id="emailField" promptText="Introduce tu correo electrónico" styleClass="text-field" />
+
+                <Label text="Contraseña:"/>
+                <PasswordField fx:id="passwordInput" promptText="Introduce tu contraseña" styleClass="password-field" />
+
+                <!-- DNI y Fecha de Nacimiento -->
+                <Label text="DNI:"/>
+                <TextField fx:id="dniField" promptText="Introduce tu DNI" styleClass="text-field" />
+
+                <Label text="Teléfono:"/>
+                <TextField fx:id="phoneField" promptText="Introduce tu teléfono" styleClass="text-field" />
+
+                <Label text="Fecha de nacimiento:"/>
+                <DatePicker fx:id="birthDateField" styleClass="date-picker" />
+            </VBox>
+
+            <!-- Sección de Ubicación -->
+            <VBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="CENTER_LEFT" styleClass="section">
+                <Label text="Información de Ubicación" styleClass="section-title"/>
+
+                <!-- Dirección, Ciudad, Código Postal -->
+                <Label text="Dirección:"/>
+                <TextField fx:id="addressField" promptText="Introduce tu dirección" styleClass="text-field" />
+
+                <Label text="Ciudad:"/>
+                <TextField fx:id="cityField" promptText="Introduce tu ciudad" styleClass="text-field" />
+
+                <Label text="Código Postal:"/>
+                <TextField fx:id="postalCodeField" promptText="Introduce tu código postal" styleClass="text-field" />
+
+                <!-- Provincia y Seguro Médico -->
+                <Label text="Provincia:"/>
+                <ComboBox fx:id="provinceComboBox" promptText="Selecciona tu provincia" styleClass="combo-box" />
+
+                <Label text="Seguro Médico:"/>
+                <ComboBox fx:id="insuranceComboBox" promptText="Selecciona un seguro" styleClass="combo-box" />
+            </VBox>
+        </GridPane>
+    </center>
+
+    <!-- Botón de registro en la parte inferior -->
+    <bottom>
+        <VBox alignment="CENTER" spacing="10" BorderPane.alignment="CENTER">
+            <Button text="Registrar" onAction="#onRegister" styleClass="button" />
+            <Label fx:id="errorLabel" styleClass="error-label"/>
+        </VBox>
+    </bottom>
+
+</BorderPane>
